@@ -1,26 +1,18 @@
 import React from 'react';
 
-const CharacterCard = () => {
+const CharacterCard = ({character}) => {
     return (
-        <main>
-        <div class="cards">
         <div class="card-block">
                 <div class="card-img">
-                    <img src="" alt="гермиона"/>
+                    <img src={'http://localhost:3000/static/' + character.image} alt="img"/>
                 </div>
 
                 <div class="card-text">
-                    <h3>Hermione Granger</h3>
-                    <p>Actor: Emma Watson</p>
-                    <p>Gender: female</p>
-                    <p>House: Гриффиндор</p>
-                    <p>Wand core: dragon heartstring</p>
-                    <p>Alive: yes </p>
+                    <h3>{character.name}</h3>
+                    <p>School: {}</p>
+                    <p>Age:{character.age}</p>
                 </div>
             </div>
-
-        </div>
-    </main>
     );
 }
 
