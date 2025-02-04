@@ -7,6 +7,7 @@ function App() {
 
   const [schools, setSchools] = useState([])
   const [characters, setCharacters] = useState([])
+  const [searchTerm, setSearchTerm] = useState('')
 
   useEffect(() => {
 
@@ -25,11 +26,18 @@ function App() {
     })
   }, []);
 
+  const handleSearchChange = (term) => {
+    setSearchTerm(term);
+  };
+
+    const filteredCharacters = characters.filter((character) => 
+    character.name.toLowerCase().includes(searchTerm.toLowerCase())
+  );
  
     return (
       <>
-          <Header schools={schools}/>
-          <CharacterList characters = {characters}/>
+          <Header searchTerm={searchTerm} onSearchChange={handleSearchChange} schools={schools}/>
+          <CharacterList characters={filteredCharacters} />
       </>
     );
   }

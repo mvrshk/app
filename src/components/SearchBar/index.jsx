@@ -1,9 +1,15 @@
 import React from 'react';
 
-const SearchBar = ({schools}) => {
+const SearchBar = ({schools, searchTerm, onSearchChange}) => {
+
+    const handleInputChange = (event) => {
+        onSearchChange(event.target.value); // Передаем новое значение в App
+      };
+
+
     return (
     <div class="header-input">
-        <label for="input-name">Name<input class="name-input" name="input-name" type="text" placeholder="Hermione"/></label>
+        <label for="input-name">Name<input class="name-input" name="input-name" type="text" placeholder="SearchByName" value={searchTerm} onChange={handleInputChange}/></label>
 
         <label for="input-school">School
             <select name="input-school" class="name-school" id="input-school">

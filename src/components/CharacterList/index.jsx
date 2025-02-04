@@ -7,7 +7,7 @@ const CharacterList = ({characters}) => {
         <div class="cards">
             {
                 characters && characters.map((character)=> {
-                    return <CharacterCard character={character} />
+                    return <CharacterCard character={character} key={character.id}/>
                 })
             }
         </div>

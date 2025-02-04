@@ -1,7 +1,7 @@
 import React from 'react';
 import SearchBar from '../SearchBar';
 
-const Header = ({schools}) => {
+const Header = ({schools, onSearchChange}) => {
     return (
         <header>
         <div class="header-block">
@@ -9,7 +9,7 @@ const Header = ({schools}) => {
                 <h1>Harry Potter</h1>
                 <h2>View all characters from the Harry Potter universe</h2>
             </div>
-            <SearchBar schools={schools}/>
+            <SearchBar schools={schools} onSearchChange={onSearchChange}/>
         </div>
         </header>
     );
