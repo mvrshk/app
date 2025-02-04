@@ -9,7 +9,7 @@ const CharacterCard = ({character}) => {
 
                 <div class="card-text">
                     <h3>{character.name}</h3>
-                    <p>School: {}</p>
+                    <p>School: {character.schoolId}</p>
                     <p>Age:{character.age}</p>
                 </div>
             </div>

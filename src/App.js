@@ -17,23 +17,20 @@ function App() {
       setSchools(schools);
     })
 
-  }, []);
-
-  useEffect(() => {
-
     fetch('http://localhost:3000/characters').then((data) => {
       return data.json();
     }).then((characters) => {
       console.log(characters);
       setCharacters(characters);
     })
-
   }, []);
+
+ 
     return (
-      <body>
+      <>
           <Header schools={schools}/>
-          <CharacterList characters = {characters} schools={schools}/>
-      </body>
+          <CharacterList characters = {characters}/>
+      </>
     );
   }
 

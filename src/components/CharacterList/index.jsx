@@ -1,13 +1,13 @@
 import React from 'react';
 import CharacterCard from '../CharacterCard';
 
-const CharacterList = ({characters, schools}) => {
+const CharacterList = ({characters}) => {
     return (
         <main>
         <div class="cards">
             {
                 characters && characters.map((character)=> {
-                    return <CharacterCard character={character} schools={schools}/>
+                    return <CharacterCard character={character} />
                 })
             }
         </div>
